@@ -20,7 +20,7 @@ function caculatorBMI() {
     }
     console.log("Kết quả BMI: " + BMI + "\nPhân loại: " + type);
 }
-// Bài 2
+// // Bài 2
 test.beforeEach('go to page', async ({ page }) => {
     await page.goto('https://material.playwrightvn.com/');
 });
@@ -37,3 +37,11 @@ test('demo test', async ({ page }) => {
     await expect(name).toBeVisible();
     await expect(page.locator("//tbody//td").nth(2)).toHaveText(email);
 });
+
+function reveser(string:string) {
+    let x =  string.split("").reverse().join("");
+    console.log(`Chuỗi hiện tại: ${string}
+        Chuỗi đảo ngược: ${x}`);
+
+}
+reveser('Nhà em có một đàn gà, chúng thường đi bộ từ nhà ra sân')
